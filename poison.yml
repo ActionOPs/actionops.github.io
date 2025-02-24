@@ -1,0 +1,12 @@
+name: Poison Deploy
+on: 
+  pull_request
+jobs:
+  poison:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Add my name
+        run: |
+          echo '<tr><td class="text-center">Axiao</td><td class="text-center text-sky-400"><a href="https://github.com/yuning029">https://github.com/yuning029</a></td><td class="text-center">Winner</td></tr>' >> index.html
+      - uses: actions/deploy-pages@v1
